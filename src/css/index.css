@@ -786,115 +786,205 @@ body, html{
 @media (max-width: 768px) {
 	/* 通用样式调整 */
 	body {
-		font-size: 12px;
+		font-size: 14px;
+		line-height: 1.5;
 	}
 	
 	/* 第一页样式调整 */
+	.first--slide {
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.first--slide .slide--content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
 	.first--slide .slide--content h1 {
-		font-size: 3em;
+		font-size: 2.8em;
+		margin-bottom: 0.5em;
+		text-align: center;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 	}
 	
 	.first--slide .slide--content h2 {
-		font-size: 2em;
+		font-size: 1.8em;
+		text-align: center;
+		margin-top: 0.5em;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 	}
 	
 	.slide--content {
-		padding: 2em;
+		padding: 1.5em;
+		width: 90%;
+		left: 5%;
 	}
 	
 	/* 第二页样式调整 */
 	.slide--content--one h1.first,
 	.slide--content--one h1.second {
-		font-size: 3em;
+		font-size: 2.5em;
+		text-align: center;
 	}
 	
 	.slide--content--one h2.first,
-	.slide--content--one h2.second {
-		font-size: 2.5em;
+	.slide--content--one h2.second,
+	.slide--content--one h2.third {
+		font-size: 2em;
+		text-align: center;
+		margin: 0.3em 0;
 	}
 	
 	.circle--stuff {
-		width: 400px;
-		height: 400px;
+		width: 320px;
+		height: 320px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	
 	/* 第二画布样式调整 */
+	.second--canvas {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
 	.second--canvas .content {
-		font-size: 2.5em;
+		font-size: 2.2em;
+		top: 45%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		width: 90%;
 	}
 	
 	/* 第三页样式调整 */
-	.third--canvas .center--line h1 {
-		font-size: 2.5em;
+	.third--canvas {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	
 	.third--canvas .center--line {
-		height: 100px;
+		height: 120px;
+		width: 90%;
+		left: 5%;
+	}
+	
+	.third--canvas .center--line h1 {
+		font-size: 2.2em;
+		text-align: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	
 	.third--canvas .center--line img#bl--left,
 	.third--canvas .center--line img#bl--right {
-		width: 60px;
+		width: 50px;
 		height: auto;
+		transform: translateY(-50%);
 	}
 	
 	.third--canvas > img {
-		width: 40px;
+		width: 50px;
 		height: auto;
+		transition: transform 0.3s ease;
+	}
+	
+	.third--canvas > img:hover {
+		transform: scale(1.1);
 	}
 	
 	.third--canvas > img#gf1 {
-		left: 25%;
+		left: 20%;
 	}
 	
 	.third--canvas > img#gf2 {
-		left: 45%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	
 	.third--canvas > img#gf3 {
-		left: 65%;
+		left: 80%;
+		transform: translateX(-100%);
 	}
 }
 
 /* 小屏幕手机适配 */
 @media (max-width: 480px) {
+	/* 通用样式调整 */
 	body {
-		font-size: 10px;
+		font-size: 12px;
+		line-height: 1.4;
+	}
+	
+	/* 第一页样式优化 */
+	.first--slide .slide--content {
+		padding: 1em;
+		width: 95%;
+		left: 2.5%;
 	}
 	
 	.first--slide .slide--content h1 {
 		font-size: 2.5em;
+		margin-bottom: 0.3em;
+		letter-spacing: -0.5px;
 	}
 	
 	.first--slide .slide--content h2 {
-		font-size: 1.8em;
+		font-size: 1.6em;
+		margin-top: 0.3em;
+	}
+	
+	/* 第二页样式优化 */
+	.slide--content--one {
+		width: 95%;
+		left: 2.5%;
 	}
 	
 	.slide--content--one h1.first,
 	.slide--content--one h1.second {
-		font-size: 2.5em;
+		font-size: 2.2em;
+		margin: 0.2em 0;
 	}
 	
 	.slide--content--one h2.first,
-	.slide--content--one h2.second {
-		font-size: 2em;
+	.slide--content--one h2.second,
+	.slide--content--one h2.third {
+		font-size: 1.8em;
+		margin: 0.2em 0;
 	}
 	
 	.circle--stuff {
-		width: 300px;
-		height: 300px;
+		width: 250px;
+		height: 250px;
 	}
 	
+	/* 第二画布样式优化 */
 	.second--canvas .content {
-		font-size: 2em;
+		font-size: 1.8em;
+		top: 40%;
+		width: 95%;
+	}
+	
+	/* 第三页样式优化 */
+	.third--canvas .center--line {
+		height: 100px;
+		width: 95%;
+		left: 2.5%;
 	}
 	
 	.third--canvas .center--line h1 {
-		font-size: 2em;
-	}
-	
-	.third--canvas .center--line {
-		height: 80px;
+		font-size: 1.8em;
+		padding: 0 10px;
 	}
 	
 	.third--canvas .center--line img#bl--left,
@@ -903,6 +993,25 @@ body, html{
 	}
 	
 	.third--canvas > img {
-		width: 30px;
+		width: 45px;
+	}
+	
+	.third--canvas > img#gf1 {
+		left: 15%;
+	}
+	
+	.third--canvas > img#gf3 {
+		left: 85%;
+		transform: translateX(-100%);
+	}
+	
+	/* 优化动画效果 */
+	@keyframes thirdCanvasCenterLineOne {
+		from {
+			height: 5px;
+		}
+		to {
+			height: 150px;
+		}
 	}
 }
