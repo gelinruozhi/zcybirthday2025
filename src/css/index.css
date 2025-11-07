@@ -193,7 +193,7 @@ body, html{
 	}
 }
 
-@keyframes firstSlideOverlayOne{
+@keyframes firstSlideOverlayTwo{
 	from{
 		transform: scale(1);
 	}
@@ -693,6 +693,22 @@ body, html{
 	animation-delay: 4200ms;
 }
 
+.third--canvas .center--line h1 > span:nth-child(14){
+	animation-delay: 4300ms;
+}
+
+.third--canvas .center--line h1 > span:nth-child(15){
+	animation-delay: 4400ms;
+}
+
+.third--canvas .center--line h1 > span:nth-child(16){
+	animation-delay: 4500ms;
+}
+
+.third--canvas .center--line h1 > span:nth-child(17){
+	animation-delay: 4600ms;
+}
+
 .third--canvas > img{
 	position: absolute;
 	width:auto;
@@ -763,5 +779,130 @@ body, html{
 	}
 	to{
 		height:200px;
+	}
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+	/* 通用样式调整 */
+	body {
+		font-size: 12px;
+	}
+	
+	/* 第一页样式调整 */
+	.first--slide .slide--content h1 {
+		font-size: 3em;
+	}
+	
+	.first--slide .slide--content h2 {
+		font-size: 2em;
+	}
+	
+	.slide--content {
+		padding: 2em;
+	}
+	
+	/* 第二页样式调整 */
+	.slide--content--one h1.first,
+	.slide--content--one h1.second {
+		font-size: 3em;
+	}
+	
+	.slide--content--one h2.first,
+	.slide--content--one h2.second {
+		font-size: 2.5em;
+	}
+	
+	.circle--stuff {
+		width: 400px;
+		height: 400px;
+	}
+	
+	/* 第二画布样式调整 */
+	.second--canvas .content {
+		font-size: 2.5em;
+	}
+	
+	/* 第三页样式调整 */
+	.third--canvas .center--line h1 {
+		font-size: 2.5em;
+	}
+	
+	.third--canvas .center--line {
+		height: 100px;
+	}
+	
+	.third--canvas .center--line img#bl--left,
+	.third--canvas .center--line img#bl--right {
+		width: 60px;
+		height: auto;
+	}
+	
+	.third--canvas > img {
+		width: 40px;
+		height: auto;
+	}
+	
+	.third--canvas > img#gf1 {
+		left: 25%;
+	}
+	
+	.third--canvas > img#gf2 {
+		left: 45%;
+	}
+	
+	.third--canvas > img#gf3 {
+		left: 65%;
+	}
+}
+
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+	body {
+		font-size: 10px;
+	}
+	
+	.first--slide .slide--content h1 {
+		font-size: 2.5em;
+	}
+	
+	.first--slide .slide--content h2 {
+		font-size: 1.8em;
+	}
+	
+	.slide--content--one h1.first,
+	.slide--content--one h1.second {
+		font-size: 2.5em;
+	}
+	
+	.slide--content--one h2.first,
+	.slide--content--one h2.second {
+		font-size: 2em;
+	}
+	
+	.circle--stuff {
+		width: 300px;
+		height: 300px;
+	}
+	
+	.second--canvas .content {
+		font-size: 2em;
+	}
+	
+	.third--canvas .center--line h1 {
+		font-size: 2em;
+	}
+	
+	.third--canvas .center--line {
+		height: 80px;
+	}
+	
+	.third--canvas .center--line img#bl--left,
+	.third--canvas .center--line img#bl--right {
+		width: 40px;
+	}
+	
+	.third--canvas > img {
+		width: 30px;
 	}
 }
